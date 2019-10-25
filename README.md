@@ -7,6 +7,11 @@
 ## 버전 
 	nodejs : 12.13.0(LTS)
 
+## yarn 추가 설치목록
+	yarn add classnames
+	yarn add open-color include-media
+	yarn add styled-components
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
