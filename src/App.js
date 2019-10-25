@@ -1,4 +1,4 @@
-import React,{ Component } from 'react';
+import React,{ Component,useState } from 'react';
 // import logo from './logo.svg';
 import MyComponent from './sample/MyComponent';
 import Counter from './sample/Counter';
@@ -10,6 +10,7 @@ import ScrollBox from './sample/ScrollBox';
 import IterationSample from './sample/IterationSample';
 import LifeCycleSample from './sample/LifeCycleSample';
 import ErrorBoundary from './sample/ErrorBoundary';
+import CounterReducer from './sample/CounterReducer';
 import Info from './sample/Info';
 // import './App.css';
 
@@ -17,20 +18,26 @@ function getRandomColor(){
   return '#'+Math.floor(Math.random() * 16777215).toString(16);
 }
 
-class App extends Component {
+// class App extends Component {
+const App = () => {
   
-  state = {
-    color: '#000000'
+  // state = {
+  //   color: '#000000'
+  // }
+
+  const handleClick = () => {
+    // this.setState({
+    //   color: getRandomColor()
+    // });
+    setColor(getRandomColor());
   }
 
-  handleClick = () => {
-    this.setState({
-      color: getRandomColor()
-    });
-  }
+  
 
-  render(){
+  // render(){
     const name = 'react';
+    const [visible, setVisible] = useState(false);
+    const [color, setColor] = useState('#000000');
     return(
       <div>
         <p>=================MyComponent=================</p>
@@ -55,16 +62,24 @@ class App extends Component {
         <IterationSample/>
 
         <p>=================LifeCycleSample=================</p>
-        <button onClick={this.handleClick}>랜덤색상</button>
+        <button onClick={handleClick}>랜덤색상</button>
         <ErrorBoundary>
-          <LifeCycleSample color={this.state.color}/>
+          <LifeCycleSample color={color}/>
         </ErrorBoundary>
 
         <p>=================Info=================</p>
-        <Info/>
+        <button onClick={() => {
+            setVisible(!visible);
+        }}>{visible ? '숨기기' : '보이기'}
+        </button>
+        <hr/>
+        {visible && <Info/>}
+
+        <p>=================CounterReducer=================</p>
+        <CounterReducer/>
       </div>
     )
-  }
+  // }
 }
 
 export default App;
