@@ -12,6 +12,8 @@ import LifeCycleSample from './sample/LifeCycleSample';
 import ErrorBoundary from './sample/ErrorBoundary';
 import CounterReducer from './sample/CounterReducer';
 import Info from './sample/Info';
+import Info2 from './sample/Info2';
+import Average from './sample/Average';
 // import './App.css';
 
 function getRandomColor(){
@@ -77,6 +79,13 @@ const App = () => {
 
         <p>=================CounterReducer=================</p>
         <CounterReducer/>
+
+        <p>=================Average=================</p>
+        <Average/>
+
+        <p>=================Info2=================</p>
+        <Info2/>
+        
       </div>
     )
   // }
