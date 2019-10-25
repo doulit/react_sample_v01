@@ -14,6 +14,7 @@ import CounterReducer from './sample/CounterReducer';
 import Info from './sample/Info';
 import Info2 from './sample/Info2';
 import Average from './sample/Average';
+import SassComponent from './sample/SassComponent';
 // import './App.css';
 
 function getRandomColor(){
@@ -85,6 +86,9 @@ const App = () => {
 
         <p>=================Info2=================</p>
         <Info2/>
+
+        <p>=================SassComponent=================</p>
+        <SassComponent/>      
         
       </div>
     )
