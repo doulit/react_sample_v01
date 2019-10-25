@@ -1,6 +1,9 @@
 # react_sample_v01
 	리액트 샘플
 
+## 최초 git pull 후 실행시
+	'npm install' 커맨드 실행하여 node_modules 폴더생성
+	
 ## 버전 
 	nodejs : 12.13.0(LTS)
 
