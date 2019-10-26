@@ -16,6 +16,7 @@ import Info2 from './sample/Info2';
 import Average from './sample/Average';
 import SassComponent from './sample/SassComponent';
 import CSSModule from './sample/CSSModule';
+import StyledComponent from './sample/StyledComponent';
 // import './App.css';
 
 function getRandomColor(){
@@ -93,6 +94,9 @@ const App = () => {
         
         <p>=================CSSModule=================</p>
         <CSSModule/>      
+
+        <p>=================StyledComponent=================</p>
+        <StyledComponent/>  
       </div>
     )
   // }
